@@ -28,6 +28,6 @@ danagotchi.controller('DanagotchiController', ['$resource', function($resource){
 	}
 
 	self.delete = function(){
-		self.gratitudeInput = undefined;
+		self.gratitudeInput = localStorage.removeItem('gratitudeInput');
 	}
 }]);
