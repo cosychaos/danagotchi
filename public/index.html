@@ -5,10 +5,13 @@
     <title>DANAGOTCHI</title>
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script src='bower_components/jquery/dist/jquery.js'></script>
     <script src='bower_components/angular/angular.js'></script>
     <script src='bower_components/angular-resource/angular-resource.js'></script>
+    <script src="bower_components/js/angular-local-storage.min.js"></script> 
     <script src="js/app.js"></script>
+    <script src="js/animation.js"></script>
     <script src="js/danagotchiController.js"></script>
   </head>
 
@@ -27,8 +30,12 @@
           </div>
         </form>
         <div ng-show="danagotchi.isGratitudeInputDefined()">
-        <h1>Today </br> </br>I'm grateful for </h1>
-        <h2 id="gratitude-answer">{{danagotchi.gratitudeInput}} </h2>
+        <h1><span class= "header">Today</span><br/> I'm grateful for </h1>
+            <div class="delete">
+            <h2 id="gratitude-answer" class="content" ng-mouseover="danagotchi.showButton()"  ng-mouseleave="danagotchi.hideButton()">{{danagotchi.gratitudeInput}}</h2>
+              <button type="button" ng-class="{hidden: !danagotchi.show}" ng-click="danagotchi.delete()">delete</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

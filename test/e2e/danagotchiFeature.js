@@ -8,6 +8,7 @@ describe('Danagotchi', function(){
     expect(browser.getTitle()).toEqual('DANAGOTCHI');
     expect(element(by.id('greeting')).getText()).toBe('Hello Ina!');
     expect(element(by.css("h2")).getText()).toBe("What are you grateful for today?");
+    expect(element(by.id('gratitude-input')).getText()).toBe('');
     element(by.id('gratitude-input')).sendKeys("Family");
     element(by.id('gratitude-form')).submit();
     expect(element(by.id('gratitude-answer')).getText()).toBe('Family');
