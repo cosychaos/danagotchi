@@ -3,7 +3,8 @@
   <head>
     <meta charset='utf-8'>
     <title>DANAGOTCHI</title>
-    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script src='bower_components/jquery/dist/jquery.js'></script>
     <script src='bower_components/angular/angular.js'></script>
     <script src='bower_components/angular-resource/angular-resource.js'></script>
@@ -12,8 +13,19 @@
   </head>
 
   <body ng-controller="DanagotchiController as danagotchi">
-    <h1 id="greeting"> Hello {{danagotchi.displayName}}!</h1>
-    <input type="text" ng-model="newDisplayName" id="username" placeholder="Enter your name">
-    <button ng-click="danagotchi.addDisplayName(newDisplayName)">Submit</button>
+    <div class="container-fluid white-container">
+      <div class= "text-center col-md-4 col-md-offset-4">
+        <form ng-hide="danagotchi.isDisplayNameDefined()" ng-submit="danagotchi.addDisplayName(newDisplayName)">
+          <h1 id="greeting"> What's your name? </h1>
+          <input type="text" id="username" class="rounded-form" ng-model="newDisplayName">
+          <!-- <button ng-click="danagotchi.addDisplayName(newDisplayName)">Submit</button> -->
+        </form>
+        <form ng-show="danagotchi.isDisplayNameDefined()">
+          <h1> Hello {{danagotchi.displayName}}!</h1>
+          <h2>Today I'm grateful for...</h2>
+          <input type="text" id="gratitude" class="rounded-form" ng-model="">
+        </form>
+      </div>
+    </div>
   </body>
 </html>
