@@ -33,7 +33,7 @@ So that the website feels personalised,
 I want to be greeted by name.
 ```
 
-**User story 2:**
+**User story 2:** :heavy_check_mark:
 ```
 As a user,
 So that I can be inspired,
