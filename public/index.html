@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang='en' ng-app="Danagotchi">
+  <head>
+    <meta charset='utf-8'>
+    <title>DANAGOTCHI</title>
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'>
+    <script src='bower_components/jquery/dist/jquery.js'></script>
+    <script src='bower_components/angular/angular.js'></script>
+    <script src='bower_components/angular-resource/angular-resource.js'></script>
+    <script src="js/app.js"></script>
+    <script src="js/danagotchiController.js"></script>
+  </head>
+
+  <body ng-controller="DanagotchiController as danagotchi">
+    <h1 id="greeting"> Hello {{danagotchi.displayName}}!</h1>
+    <input type="text" ng-model="newDisplayName" id="username" placeholder="Enter your name">
+    <button ng-click="danagotchi.addDisplayName(newDisplayName)">Submit</button>
+  </body>
+</html>
