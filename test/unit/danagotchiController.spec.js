@@ -14,20 +14,11 @@ describe('DanagotchiControllerSpec', function(){
   	ctrl.addDisplayName(newDisplayName);
   	expect(ctrl.newDisplayName).toEqual("Ina");
   });
-});	
 
+  describe("Displaying elements", function(){
+    it("displays a quote", function(){
+      expect(ctrl.quote).toEqual("Danagotchi is awesome!")
+    });
+  });
 
-// describe('DanagotchiControllerSpec', function(){
-//   beforeEach(module('Danagotchi'));
-//
-//   var ctrl;
-//
-//   beforeEach(inject(function($controller){
-//     ctrl = $controller('DanagotchiController');
-//   }));
-//
-//   it("should have a working index_path route", function(){
-//
-//   });
-//
-// });
+});

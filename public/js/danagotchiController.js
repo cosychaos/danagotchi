@@ -5,4 +5,7 @@ danagotchi.controller('DanagotchiController', ['$resource', function($resource){
 	self.addDisplayName = function(newDisplayName) {
 		self.displayName = newDisplayName;
 	};
+
+	self.quote = "Danagotchi is awesome!";
+
 }]);
