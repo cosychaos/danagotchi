@@ -1,4 +1,4 @@
-danagotchi.controller('DanagotchiController', ['$resource', function($resource){
+danagotchi.controller('DanagotchiController', ['$resource', 'Quote', function($resource, Quote){
 	var self = this;
 
 	self.displayName;
@@ -6,6 +6,8 @@ danagotchi.controller('DanagotchiController', ['$resource', function($resource){
 		self.displayName = newDisplayName;
 	};
 
-	self.quote = "Danagotchi is awesome!";
+	Quote.get(function(response) {
+		self.quote = response.contents.quotes[0].quote;
+	});
 
 }]);
