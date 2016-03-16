@@ -16,12 +16,14 @@ describe('DanagotchiControllerSpec', function(){
   });
 
   describe("Displaying elements", function(){
+
 		beforeEach(inject(function($controller){
 			ctrl = $controller('DanagotchiController');
 		}));
+
     it("has a quote", function(){
-			var newQuote = ctrl.quote = "Danagotchi is awesome!";
-      expect(ctrl.quote).toEqual("Danagotchi is awesome!")
+			var newQuote = ctrl.Quote = "Danagotchi is awesome!";
+      expect(ctrl.Quote).toEqual("Danagotchi is awesome!")
     });
   });
 
