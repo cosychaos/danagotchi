@@ -12,12 +12,11 @@ h1, h2 {
 
 h1{
 	font-size: 60px;
-	padding-top: 60%;
+	padding-top: 280px;
 }
 
 h2 {
 	font-size: 50px;
-	padding-top: 10%;
 }
 
 .rounded-form {

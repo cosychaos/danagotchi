@@ -15,16 +15,21 @@
   <body ng-controller="DanagotchiController as danagotchi">
     <div class="container-fluid white-container">
       <div class= "text-center col-md-4 col-md-offset-4">
-        <form id="displayName" ng-hide="danagotchi.isDisplayNameDefined()" ng-submit="danagotchi.addDisplayName(newDisplayName)">
+        <form id="display-name-form" ng-hide="danagotchi.isDisplayNameDefined()" ng-submit="danagotchi.addDisplayName(newDisplayName)">
           <h1> What's your name? </h1>
           <input type="text" id="username" class="rounded-form" ng-model="newDisplayName">
-          <!-- <button ng-click="danagotchi.addDisplayName(newDisplayName)">Submit</button> -->
         </form>
-        <form ng-show="danagotchi.isDisplayNameDefined()">
-          <h1 id="greeting"> Hello {{danagotchi.displayName}}!</h1>
-          <h2>Today I'm grateful for...</h2>
-          <input type="text" id="gratitude" class="rounded-form" ng-model="">
+        <form id="gratitude-form" ng-show="danagotchi.isDisplayNameDefined()" ng-submit="danagotchi.addGratitudeInput(newGratitudeInput)">
+          <div ng-hide="danagotchi.isGratitudeInputDefined()">
+            <h1 id="greeting"> Hello {{danagotchi.displayName}}!</h1>
+            <h2>What are you grateful for today?</h2>
+            <input type="text" id="gratitude-input" class="rounded-form" ng-model="newGratitudeInput">
+          </div>
         </form>
+        <div ng-show="danagotchi.isGratitudeInputDefined()">
+        <h1>Today </br> </br>I'm grateful for </h1>
+        <h2 id="gratitude-answer">{{danagotchi.gratitudeInput}} </h2>
+        </div>
       </div>
     </div>
   </body>

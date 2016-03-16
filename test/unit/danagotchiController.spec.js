@@ -14,6 +14,12 @@ describe('DanagotchiControllerSpec', function(){
   	ctrl.addDisplayName(newDisplayName);
   	expect(ctrl.newDisplayName).toEqual("Ina");
   });
+
+  it ("adds a greeting input", function(){
+    var newGratitudeInput = ctrl.newGratitudeInput = "Family";
+    ctrl.addGratitudeInput(newGratitudeInput);
+    expect(ctrl.newGratitudeInput).toEqual("Family");
+  });
 });	
 
 
