@@ -12,7 +12,13 @@ describe('DanagotchiControllerSpec', function(){
   it ("has a display name", function(){
 		var newDisplayName = ctrl.newDisplayName = "Ina";
   	ctrl.addDisplayName(newDisplayName);
-  	expect(ctrl.newDisplayName).toEqual("Ina");
+  	expect(ctrl.isDisplayNameDefined()).toEqual(true);
+  });
+
+  it ("adds a greeting input", function(){
+    var newGratitudeInput = ctrl.newGratitudeInput = "Family";
+    ctrl.addGratitudeInput(newGratitudeInput);
+    expect(ctrl.isGratitudeInputDefined()).toEqual(true);
   });
 
   describe("Displaying elements", function(){
