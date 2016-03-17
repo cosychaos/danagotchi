@@ -9,7 +9,7 @@
     <script src='bower_components/jquery/dist/jquery.js'></script>
     <script src='bower_components/angular/angular.js'></script>
     <script src='bower_components/angular-resource/angular-resource.js'></script>
-    <script src="bower_components/js/angular-local-storage.min.js"></script> 
+    <script src="bower_components/js/angular-local-storage.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/danagotchiController.js"></script>
@@ -26,12 +26,12 @@
         <form id="gratitude-form" ng-show="danagotchi.isDisplayNameDefined()" ng-submit="danagotchi.addGratitudeInput(newGratitudeInput)">
           <div ng-hide="danagotchi.isGratitudeInputDefined()">
             <h1 id="greeting"> Hello {{danagotchi.displayName}}!</h1>
-            <h2>What are you grateful for today?</h2>
+            <h2 id="gratitude-question">What are you grateful for today?</h2>
             <input type="text" id="gratitude-input" class="rounded-form" ng-model="newGratitudeInput">
           </div>
         </form>
         <div ng-show="danagotchi.isGratitudeInputDefined()">
-        <h1><span class= "header">Today</span><br/> I'm grateful for </h1>
+        <h1 id="gratitude-header"><span class= "header">Today</span><br/> I'm grateful for </h1>
             <div class="delete">
             <h2 id="gratitude-answer" class="content" ng-mouseover="danagotchi.showButton()"  ng-mouseleave="danagotchi.hideButton()">{{danagotchi.gratitudeInput}}</h2>
               <button type="button" ng-class="{hidden: !danagotchi.show}" ng-click="danagotchi.delete()">delete</button>

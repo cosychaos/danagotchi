@@ -12,28 +12,33 @@ describe('Danagotchi', function() {
       expect(element(by.id('quote')).isDisplayed()).toBe(true);
     });
   });
+
+  describe('on user name input', function() {
+
+    beforeEach(function() {
+      element(by.id('username')).sendKeys("Vicky");
+      element(by.id('display-name-form')).submit();
+    });
+
+    it('greets the user by name and asks what they are grateful for', function() {
+      expect(element(by.id('username')).isDisplayed()).toBe(false);
+      expect(element(by.id('quote')).isDisplayed()).toBe(true);
+      expect(element(by.id('greeting')).getText()).toBe('Hello Vicky!');
+      expect(element(by.id('gratitude-question')).getText()).toBe('What are you grateful for today?');
+      expect(element(by.id('gratitude-input')).isDisplayed()).toBe(true);
+    });
+  });
+
+  describe('on gratitude input', function() {
+
+    beforeEach(function() {
+      element(by.id('gratitude-input')).sendKeys("Cake");
+      element(by.id('gratitude-form')).submit();
+    });
+
+    it('lists what the user is grateful for', function() {
+      expect(element(by.id('gratitude-header')).getText()).toBe('Today\nI\'m grateful for');
+      expect(element(by.id('gratitude-answer')).getText()).toBe('Cake');
+    });
+  });
 });
-
-
-
-
-
-
-//   it("user can fill in their details and gratitude input", function(){
-//     expect(element(by.css("h1")).getText()).toBe("What's your name?");
-//     expect(element(by.id('greeting')).getText()).toBe('');
-//     element(by.id('username')).sendKeys("Ina");
-//     element(by.id('display-name-form')).submit();
-//     expect(browser.getTitle()).toEqual('DANAGOTCHI');
-//     expect(element(by.id('greeting')).getText()).toBe('Hello Ina!');
-//     expect(element(by.css("h2")).getText()).toBe("What are you grateful for today?");
-//     expect(element(by.id('gratitude-input')).getText()).toBe('');
-//     element(by.id('gratitude-input')).sendKeys("Family");
-//     element(by.id('gratitude-form')).submit();
-//     expect(element(by.id('gratitude-answer')).getText()).toBe('Family');
-//   });
-//
-//   it("displays the page title and a quote", function(){
-//     browser.get('http://localhost:4567');
-//     expect(element(by.id('quote')).getText()).toBe('Danagotchi is awesome!');
-//   });
