@@ -14,11 +14,14 @@
     <script src="js/animation.js"></script>
     <script src="js/danagotchiController.js"></script>
     <script src="js/quoteService.js"></script>
+    <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+    <script src="rrule/lib/rrule.js"></script>
   </head>
 
   <body ng-controller="DanagotchiController as danagotchi">
-    <div class="container-fluid white-container">
-      <div class= "text-center col-md-4 col-md-offset-4">
+    <div class="container-fluid">
+      <span class="glyph"><a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MW5vY282ZzVxYWJ2OHB1cmxvbGpyMW5ubzhfMjAxNjAzMTdUMTcwMDAwWiBpbmF0c2V0c292YUBt&amp;tmsrc=inatsetsova%40gmail.com"><img border="0" src="http://i.imgur.com/ueAKdli.png"></a></span>
+      <div class= "text-center col-md-4 col-md-offset-4">         
         <form id="display-name-form" ng-hide="danagotchi.isDisplayNameDefined()" ng-submit="danagotchi.addDisplayName(newDisplayName)">
           <h1> What's your name? </h1>
           <input type="text" id="username" class="rounded-form" ng-model="newDisplayName">
@@ -39,9 +42,11 @@
           </div>
         </div>
       </div>
+    <div class="row">
+      <div class= "text-center col-md-4 col-md-offset-4">
+        <h3 id="quote"> "The secret of getting ahead is getting started" <!-- "{{danagotchi.quote}}" --></h3>
+      </div>
     </div>
-    <div class= "text-center col-md-4 col-md-offset-4">
-      <h3 id="quote"> The secret of getting ahead is getting started {{danagotchi.quote}}</h3>
-    </div>
+  </div>
   </body>
 </html>
