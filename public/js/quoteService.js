@@ -9,5 +9,4 @@ danagotchi.service("Quote", function($resource, $q){
     });
     return defer.promise;
   };
-
 });

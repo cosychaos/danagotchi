@@ -10,7 +10,6 @@
     <script src='bower_components/angular/angular.js'></script>
     <script src='bower_components/angular-resource/angular-resource.js'></script>
     <script src="bower_components/js/angular-local-storage.min.js"></script> 
-    <script src="bower_components/js/angular-animate.min.js"></script> 
     <script src="js/app.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/danagotchiController.js"></script>
@@ -33,7 +32,7 @@
           </div>
         </form>
         <div ng-show="danagotchi.isGratitudeInputDefined()">
-        <h1>Today I'm grateful for </h1>
+        <h1><span class= "header">Today</span><br/> I'm grateful for </h1>
             <div class="delete">
             <h2 id="gratitude-answer" class="content" ng-mouseover="danagotchi.showButton()"  ng-mouseleave="danagotchi.hideButton()">{{danagotchi.gratitudeInput}}</h2>
 <!--               <button class="class="close-button"" type="button" ng-class="{hidden: !danagotchi.show}" ng-click="danagotchi.delete()">x</button> -->
