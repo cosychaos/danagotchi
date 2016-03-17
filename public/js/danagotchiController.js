@@ -37,4 +37,3 @@ danagotchi.controller('DanagotchiController', ['$resource', 'Quote', function($r
 		self.quote = quoteData;
 	});
 }]);
-

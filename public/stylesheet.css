@@ -34,7 +34,7 @@ h3 {
 }
 
 .rounded-form {
-  margin-top: 30px; 
+  margin-top: 30px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -74,4 +74,9 @@ h3 {
 
 .close_button{
   display: inline-block;
+}
+
+#example1 .ui-slider-bg{
+    -webkit-transition:background-color 0.2s;
+    transition: background-color 0.2s;
 }
