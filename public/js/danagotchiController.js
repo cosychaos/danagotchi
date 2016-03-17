@@ -5,4 +5,8 @@ danagotchi.controller('DanagotchiController', ['$resource', function($resource){
 	self.addDisplayName = function(newDisplayName) {
 		self.displayName = newDisplayName;
 	};
+	self.isDisplayNameDefined = function() {
+		return !!self.displayName;
+	}
+
 }]);
