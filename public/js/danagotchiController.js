@@ -8,8 +8,6 @@ danagotchi.controller('DanagotchiController', ['$resource', 'Quote', function($r
 
 	Quote.getQuote().then(function(quoteData){
 		self.quote = quoteData;
-		console.log(quoteData)
 	});
-	// self.quote = Quote.getQuote();
 
 }]);
