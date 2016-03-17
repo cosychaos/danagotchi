@@ -19,6 +19,12 @@
 
   <body ng-controller="DanagotchiController as danagotchi">
 
+    <div class="slider-container">
+      <form id="slider-control">
+        <input type='range' name='emotion' min='0' max='100'>
+      </form>
+    </div>
+
     <div class="container-fluid white-container">
       <div class= "text-center col-md-4 col-md-offset-4">
         <form id="display-name-form" ng-hide="danagotchi.isDisplayNameDefined()" ng-submit="danagotchi.addDisplayName(newDisplayName)">

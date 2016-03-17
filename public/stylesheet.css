@@ -72,6 +72,36 @@ h3 {
   border: 0;
 }
 
-.close_button{
+.close_button {
   display: inline-block;
+}
+
+.slider-container {
+  margin-top: 10%;
+  width: 100%;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin-left: 15%;
+  width: 70%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 15px;
+  background: #ddd;
+  border: none;
+  border-radius: 30px;
+  overflow: hidden;
 }
