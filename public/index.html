@@ -10,6 +10,7 @@
     <script src='bower_components/angular-resource/angular-resource.js'></script>
     <script src="js/app.js"></script>
     <script src="js/danagotchiController.js"></script>
+    <script src="js/quoteService.js"></script>
   </head>
 
   <body ng-controller="DanagotchiController as danagotchi">
@@ -27,5 +28,7 @@
         </form>
       </div>
     </div>
+
+    <h1 id="quote"> Quote: {{danagotchi.quote}}</h1>
   </body>
 </html>
