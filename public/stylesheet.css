@@ -3,7 +3,7 @@ body {
     background-repeat: repeat;
 }
 
-h1, h2 {
+h1, h2, h3 {
   color:#F5F5F5;
   font-family: 'Open Sans', sans-serif;
 }
@@ -11,13 +11,19 @@ h1, h2 {
 h1{
   font-weight: bold;
 	font-size: 60px;
-	padding-top: 280px;
+	padding-top: 35%;
 }
 
 h2 {
 	font-size: 50px;
 }
 
+h3 {
+  font-size: 18px;
+  padding-top: 40%;
+  padding-bottom: 40px;
+  line-height: 25px;
+}
 .header {
   font-size: 80px;
   line-height: 140px;
