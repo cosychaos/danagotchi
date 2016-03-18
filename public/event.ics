@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTSTAMP:20160317T145910Z
+ORGANIZER;CN=Organizer:MAILTO:Organizer e-mail
+STATUS:CONFIRMED
+UID:1458226750@addevent.com
+DTSTART:20160331T070000Z
+DTEND:20160331T090000Z
+SUMMARY:Summary of the event
+DESCRIPTION:Description of the event\nExample of a new line
+X-ALT-DESC;FMTTYPE=text/html:Description of the event<br>Example of a new line
+LOCATION:Location of the event
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
