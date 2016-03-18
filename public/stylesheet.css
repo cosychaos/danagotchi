@@ -1,36 +1,39 @@
 body {
     background-image: url('field-small.jpg');
-    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
 }
 
 h1, h2, h3 {
-  color:#F5F5F5;
+  color: #F5F5F5;
   font-family: 'Open Sans', sans-serif;
 }
 
 h1{
   font-weight: bold;
-	font-size: 60px;
-	padding-top: 35%;
+	font-size: 55px;
+	padding-top: 55%;
 }
 
 h2 {
-	font-size: 50px;
+	font-size: 35px;
 }
 
 h3 {
   font-size: 18px;
-  padding-top: 40%;
-  padding-bottom: 40px;
+  padding-top: 70%;
+  padding-bottom: -10px;
   line-height: 25px;
-}
-.header {
-  font-size: 80px;
-  line-height: 140px;
 }
 
 .hidden{
   display: none;
+}
+
+.glyph {
+  float:right;
+  padding-top: 25px;
+  padding-right: 10px;
 }
 
 .rounded-form {
@@ -71,7 +74,20 @@ h3 {
   background-color: transparent;
   border: 0;
 }
-
-.close_button{
+.content{
   display: inline-block;
+}
+.close-button{
+  display: inline-block;
+  position: relative;
+  text-align: top;
+  color: #F5F5F5;
+  font-size: 1.5em;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
+.close-button:hover {
+  color: #CCCCCC;
+  cursor: pointer; 
 }
