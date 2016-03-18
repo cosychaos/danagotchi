@@ -1,0 +1,8 @@
+<div ng-show="danagotchi.isGratitudeInputDefined()">
+  <h1 id="gratitude-header">Today I'm grateful for </h1>
+  <div class="delete">
+    <h2 id="gratitude-answer" class="content" ng-mouseover="danagotchi.showButton()" ng-mouseleave="danagotchi.hideButton()">{{danagotchi.gratitudeInput}}</h2>
+    <a class="close-button"><span class="glyphicon glyphicon-remove" ng-class="{hidden: !danagotchi.show}" ng-click="danagotchi.delete()"></span></a>
+  </div>
+</div>
+</div>
