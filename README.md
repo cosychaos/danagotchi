@@ -47,18 +47,18 @@ So that I can be mindful of my emotional state,
 I would like to note my emotions.
 ```
 
-**User story 4:**
+**User story 4:** :heavy_check_mark:
 ```
 As a user,
 So that I can reflect,
 I would like to record something I'm grateful for.
 ```
 
-**User story 5:**
+**User story 5:** :heavy_check_mark:
 ```
 As a busy user,
 So that I don't miss yoga and meditation,
-I would like to be reminded of an event 15min before it happens.
+I would like to add an event to my calendar.
 ```
 Team:
 [Ina Tsetsova](https://github.com/tsetsova), [Joe Wroe](https://github.com/JoeWroe), [Marion LV](https://github.com/marion-lv) & [Vicky Gray](https://github.com/vickymg)
