@@ -3,17 +3,61 @@
   <head>
     <meta charset='utf-8'>
     <title>DANAGOTCHI</title>
-    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script src='bower_components/jquery/dist/jquery.js'></script>
     <script src='bower_components/angular/angular.js'></script>
     <script src='bower_components/angular-resource/angular-resource.js'></script>
     <script src="js/app.js"></script>
     <script src="js/danagotchiController.js"></script>
+    <script src="js/quoteService.js"></script>
   </head>
 
   <body ng-controller="DanagotchiController as danagotchi">
-    <h1 id="greeting"> Hello {{danagotchi.displayName}}!</h1>
-    <input type="text" ng-model="newDisplayName" id="username" placeholder="Enter your name">
-    <button ng-click="danagotchi.addDisplayName(newDisplayName)">Submit</button>
+    <div class="container-fluid">
+      <span class="glyph"><a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MW5vY282ZzVxYWJ2OHB1cmxvbGpyMW5ubzhfMjAxNjAzMTdUMTcwMDAwWiBpbmF0c2V0c292YUBt&amp;tmsrc=inatsetsova%40gmail.com"><img border="0" src="http://i.imgur.com/ueAKdli.png"></a></span>
+      <div class= "text-center col-md-4 col-md-offset-4">         
+        <form id="display-name-form" ng-hide="danagotchi.isDisplayNameDefined()" ng-submit="danagotchi.addDisplayName(newDisplayName)">
+          <h1> What's your name? </h1>
+          <input type="text" autofocus="autofocus" id="username" class="rounded-form" ng-model="newDisplayName">
+        </form>
+        <form id="emotion-input" ng-show="danagotchi.isDisplayNameDefined()">
+            <div class="btn-group" ng-hide="danagotchi.isEmotionDefined()">
+              <h1 id="greeting"> Hello {{danagotchi.displayName}}!</h1>
+              <h2 id = "emotion-question">How are you feeling today?</h2>
+              <button id="1" type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(1)">1</button>
+              <button id="2" type="button" class="btn btn-link button-white" value="2" ng-click="danagotchi.addEmotion(2)">2</button>
+              <button id="3" type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(3)">3</button>
+              <button id="4" type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(4)">4</button>
+              <button id="5" type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(5)">5</button>
+              <button id="6" type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(6)">6</button>
+              <button id="7" type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(7)">7</button>
+              <button id="8" type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(8)">8</button>
+              <button id="9" type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(9)">9</button>
+              <button id="10" type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(10)">10</button>
+            </div>
+        </form>
+        <form id="gratitude-form" ng-show="danagotchi.isEmotionDefined()" ng-submit="danagotchi.addGratitudeInput(newGratitudeInput)">
+          <div ng-hide="danagotchi.isGratitudeInputDefined()">
+            <h1 id="short-greeting">{{danagotchi.displayName}},</h1>
+            <h2 id="gratitude-question">What are you grateful for today?</h2>
+            <input type="text" autofocus="autofocus" id="gratitude-input" class="rounded-form" ng-model="newGratitudeInput">
+          </div>
+        </form>
+        <div ng-show="danagotchi.isGratitudeInputDefined()">
+          <h1 id="gratitude-header">Today I'm grateful for </h1>
+          <div class="delete">
+            <h2 id="gratitude-answer" class="content" ng-mouseover="danagotchi.showButton()" ng-mouseleave="danagotchi.hideButton()">{{danagotchi.gratitudeInput}}</h2>
+            <a class="close-button"><span class="glyphicon glyphicon-remove" ng-class="{hidden: !danagotchi.show}" ng-click="danagotchi.delete()"></span></a>
+          </div>
+        </div>
+      </div>
+    <div class="row">
+      <div class= "text-center col-md-4 col-md-offset-4">
+        <h3 id="quote"> "The secret of getting ahead is getting started" <!-- "{{danagotchi.quote}}" --></h3>
+      </div>
+    </div>
+  </div>
   </body>
 </html>
