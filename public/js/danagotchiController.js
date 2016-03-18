@@ -3,14 +3,24 @@ danagotchi.controller('DanagotchiController', ['$resource', 'Quote', function($r
 
 	self.displayName = localStorage.getItem('displayName');
 	self.gratitudeInput = localStorage.getItem('gratitudeInput');
+	self.emotion = localStorage.getItem('emotion');
 
 	self.addDisplayName = function(newDisplayName) {
 		localStorage.setItem('displayName', newDisplayName);
 		self.displayName = localStorage.getItem('displayName');
-	}
+	};
 
 	self.isDisplayNameDefined = function() {
 		return !!self.displayName;
+	};
+
+	self.addEmotion = function(newEmotion) {
+		localStorage.setItem('emotion', newEmotion);
+		self.emotion = localStorage.getItem('emotion');
+	};
+
+	self.isEmotionDefined = function() {
+		return !!self.emotion;
 	};
 
 	self.addGratitudeInput = function(newGratitudeInput) {

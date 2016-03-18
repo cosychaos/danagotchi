@@ -10,7 +10,6 @@
     <script src='bower_components/angular/angular.js'></script>
     <script src='bower_components/angular-resource/angular-resource.js'></script>
     <script src="js/app.js"></script>
-    <script src="js/animation.js"></script>
     <script src="js/danagotchiController.js"></script>
     <script src="js/quoteService.js"></script>
   </head>
@@ -23,9 +22,25 @@
           <h1> What's your name? </h1>
           <input type="text" autofocus="autofocus" id="username" class="rounded-form" ng-model="newDisplayName">
         </form>
-        <form id="gratitude-form" ng-show="danagotchi.isDisplayNameDefined()" ng-submit="danagotchi.addGratitudeInput(newGratitudeInput)">
+        <form id="emotion-form" ng-show="danagotchi.isDisplayNameDefined()">
+            <div class="btn-group" ng-hide="danagotchi.isEmotionDefined()">
+              <h1 id="greeting"> Hello {{danagotchi.displayName}}!</h1>
+              <h2>How are you feeling today?</h2>
+              <button type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(1)">1</button>
+              <button type="button" class="btn btn-link button-white" value="2" ng-click="danagotchi.addEmotion(2)">2</button>
+              <button type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(3)">3</button>
+              <button type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(4)">4</button>
+              <button type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(5)">5</button>
+              <button type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(6)">6</button>
+              <button type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(7)">7</button>
+              <button type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(8)">8</button>
+              <button type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(9)">9</button>
+              <button type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(10)">10</button>
+            </div>
+        </form>
+        <form id="gratitude-form" ng-show="danagotchi.isEmotionDefined()" ng-submit="danagotchi.addGratitudeInput(newGratitudeInput)">
           <div ng-hide="danagotchi.isGratitudeInputDefined()">
-            <h1 id="greeting"> Hello {{danagotchi.displayName}}!</h1>
+            <h1 id="greeting">{{danagotchi.displayName}},</h1>
             <h2>What are you grateful for today?</h2>
             <input type="text" autofocus="autofocus" id="gratitude-input" class="rounded-form" ng-model="newGratitudeInput">
           </div>
