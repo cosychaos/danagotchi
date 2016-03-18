@@ -1,22 +1,18 @@
-danagotchi.controller('DanagotchiController', ['$resource', 'Quote', function($resource, Quote){
+danagotchi.controller('DanagotchiController', ['$resource', 'Quote', 'userService', function($resource, Quote, userService){
 	var self = this;
 	var _maxEmotionRank = 10;
 
-	self.displayName = localStorage.getItem('displayName');
+	self.displayName = userService.displayName;
 	self.gratitudeInput = localStorage.getItem('gratitudeInput');
 	self.emotion = localStorage.getItem('emotion');
 
-	self.addDisplayName = function(newDisplayName) {
-		localStorage.setItem('displayName', newDisplayName);
-		self.displayName = localStorage.getItem('displayName');
-	};
-
 	self.isDisplayNameDefined = function() {
+		self.displayName = userService.getDisplayName();
 		return !!self.displayName;
 	};
 
 	self.emotionsRatings= function() {
-		ratings = []
+		ratings = [];
 		for (i = 1; i <= _maxEmotionRank; i ++) {
  			ratings.push(i);
 		}

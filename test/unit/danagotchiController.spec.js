@@ -9,12 +9,6 @@ describe('DanagotchiControllerSpec', function(){
     ctrl = $controller('DanagotchiController');
   }));
 
-  it ("has a display name", function(){
-		var newDisplayName = ctrl.newDisplayName = "Ina";
-  	ctrl.addDisplayName(newDisplayName);
-  	expect(ctrl.isDisplayNameDefined()).toEqual(true);
-  });
-
   it ("has a emotion input", function(){
     var newEmotion = ctrl.newEmotion = "8";
     ctrl.addEmotion(newEmotion);
