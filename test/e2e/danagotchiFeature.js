@@ -20,15 +20,28 @@ describe('Danagotchi', function() {
       element(by.id('display-name-form')).submit();
     });
 
-    it('greets the user by name and asks what they are grateful for', function() {
+    it('displays options for emotion input', function() {
       expect(element(by.id('username')).isDisplayed()).toBe(false);
       expect(element(by.id('quote')).isDisplayed()).toBe(true);
       expect(element(by.id('greeting')).getText()).toBe('Hello Vicky!');
+      expect(element(by.id('emotion-question')).getText()).toBe('How are you feeling today?');
+      expect(element(by.id('emotion-input')).isDisplayed()).toBe(true);
+    });
+  });
+
+  describe('on emotion input', function() {
+    beforeEach(function() {
+      element(by.id('1')).click();
+    });
+
+    it('greets the user by name and asks what they are grateful for', function() {
+      expect(element(by.id('username')).isDisplayed()).toBe(false);
+      expect(element(by.id('quote')).isDisplayed()).toBe(true);
+      expect(element(by.id('short-greeting')).getText()).toBe('Vicky,');
       expect(element(by.id('gratitude-question')).getText()).toBe('What are you grateful for today?');
       expect(element(by.id('gratitude-input')).isDisplayed()).toBe(true);
     });
   });
-
   describe('on gratitude input', function() {
 
     beforeEach(function() {
@@ -37,7 +50,7 @@ describe('Danagotchi', function() {
     });
 
     it('lists what the user is grateful for', function() {
-      expect(element(by.id('gratitude-header')).getText()).toBe('Today\nI\'m grateful for');
+      expect(element(by.id('gratitude-header')).getText()).toBe('Today I\'m grateful for');
       expect(element(by.id('gratitude-answer')).getText()).toBe('Cake');
     });
   });

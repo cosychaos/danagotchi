@@ -15,6 +15,12 @@ describe('DanagotchiControllerSpec', function(){
   	expect(ctrl.isDisplayNameDefined()).toEqual(true);
   });
 
+  it ("has a emotion input", function(){
+    var newEmotion = ctrl.newEmotion = "8";
+    ctrl.addEmotion(newEmotion);
+    expect(ctrl.isEmotionDefined()).toEqual(true);
+  });
+
   it ("adds a greeting input", function(){
     var newGratitudeInput = ctrl.newGratitudeInput = "Family";
     ctrl.addGratitudeInput(newGratitudeInput);
