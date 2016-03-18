@@ -1,5 +1,6 @@
 danagotchi.controller('DanagotchiController', ['$resource', 'Quote', function($resource, Quote){
 	var self = this;
+	var _maxEmotionRank = 10;
 
 	self.displayName = localStorage.getItem('displayName');
 	self.gratitudeInput = localStorage.getItem('gratitudeInput');
@@ -12,6 +13,14 @@ danagotchi.controller('DanagotchiController', ['$resource', 'Quote', function($r
 
 	self.isDisplayNameDefined = function() {
 		return !!self.displayName;
+	};
+
+	self.emotionsRatings= function() {
+		ratings = []
+		for (i = 1; i <= _maxEmotionRank; i ++) {
+ 			ratings.push(i);
+		}
+		return ratings;
 	};
 
 	self.addEmotion = function(newEmotion) {
