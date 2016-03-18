@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang='en' ng-app="Danagotchi">
+  <head>
+    <meta charset='utf-8'>
+    <title>DANAGOTCHI</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body ng-controller="DanagotchiController as danagotchi">
+    <div class="container-fluid">
+			<form id="emotion-input" ng-show="danagotchi.isDisplayNameDefined()">
+			  <div class="btn-group" ng-hide="danagotchi.isEmotionDefined()">
+			    <h1 id="greeting"> Hello {{danagotchi.displayName}}!</h1>
+			    <h2 id = "emotion-question">How are you feeling today?</h2>
+			    <div id="emotion-rating" ng-repeat="emotionRating in danagotchi.emotionsRatings()">
+			      <button id="{{emotionRating}}" type="button" class="btn btn-link button-white" ng-click="danagotchi.addEmotion(emotionRating)">{{emotionRating}}</button>
+			    </div>
+			  </div>
+			</form>
+		</div>
+  </body>
+</html>

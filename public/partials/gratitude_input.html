@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang='en' ng-app="Danagotchi">
+  <head>
+    <meta charset='utf-8'>
+    <title>DANAGOTCHI</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <body ng-controller="DanagotchiController as danagotchi">
+    <div class="container-fluid">
+		<form id="gratitude-form" ng-show="danagotchi.isEmotionDefined()" ng-submit="danagotchi.addGratitudeInput(newGratitudeInput)">
+		  <div ng-hide="danagotchi.isGratitudeInputDefined()">
+		    <h1 id="short-greeting">{{danagotchi.displayName}},</h1>
+		    <h2 id="gratitude-question">What are you grateful for today?</h2>
+		    <input type="text" autofocus="autofocus" id="gratitude-input" class="rounded-form" ng-model="newGratitudeInput">
+		  </div>
+		</form>
+		</div>
+  </body>
+</html>
