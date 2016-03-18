@@ -36,7 +36,17 @@ Please note that you may have to run the following commands if you encounter err
 * `webdriver-manager update --standalone`
 * `webdriver-manager start --standalone`
 
-##Screenshots
+##Demo & Screenshots
+
+<p align="center">
+  <img src="http://i.imgur.com/VvOEvr0.gif" alt="Danagotchi demo">
+</p>
+
+<p align="center">
+  <img src="http://i.imgur.com/CSiYRiY.jpg" alt="Greeting by name" width="250"/>
+  <img src="http://i.imgur.com/6IHWPDr.jpg" alt="Emotion noting" width="250"/>
+  <img src="http://i.imgur.com/GWYMz4Q.jpg" alt="Gratitude logger" width="250"/>
+</p>
 
 ##User Stories
 
@@ -54,7 +64,7 @@ So that I can be inspired,
 I would like a motivational message to be displayed.
 ```
 
-**User story 3:**
+**User story 3:** :heavy_check_mark:
 ```
 As a user,
 So that I can be mindful of my emotional state,
