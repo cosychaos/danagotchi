@@ -32,6 +32,7 @@ h3 {
 .button-white {
   font-size: 20px;
   color: #F5F5F5;
+  padding: 20px 7px;
 }
 
 .button-white:hover {
@@ -51,6 +52,10 @@ h3 {
   float:left;
   padding-top: 25px;
   padding-right: 10px;
+}
+
+#emotion-rating{
+ display: inline;
 }
 
 .rounded-form {
