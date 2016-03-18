@@ -20,11 +20,11 @@
   <body ng-controller="DanagotchiController as danagotchi">
 
     <div class="emotion-symbols">
-      <div id="poor-emotion">
-        <h1>Poor</h1>
+      <div ng-style="poor-emotion">
+        <button type="button" value="set color" ng-click="poor-emotion{color:'red'}">Poor</button>
       </div>
       <div id="average-emotion">
-        <h1>Average</h1>
+        <span ng-click>Average</span>
       </div>
       <div id="good-emotion">
         <h1>Good</h1>
