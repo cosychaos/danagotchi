@@ -29,6 +29,23 @@ h3 {
 .hidden{
   display: none;
 }
+.button-white {
+  font-size: 20px;
+  color: #F5F5F5;
+}
+
+.button-white:hover {
+  color: #CCCCCC;
+  cursor: pointer;
+  text-decoration: none;
+  outline: 0;
+}
+.button-white:active,
+.button-white:focus, 
+{
+  outline: 0;
+  border: none;
+}
 
 .glyph {
   float:left;
